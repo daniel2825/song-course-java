@@ -1,0 +1,18 @@
+type Query {
+    ping: String @deprecated(reason: "https://stackoverflow.com/questions/59868942/graphql-a-schema-must-have-a-query-operation-defined")
+}
+
+input PersonInput{
+    name: String
+    email: String
+}
+
+type Mutation {
+    addPerson(person:PersonInput!):Person
+}
+
+type Person {
+    id: ID
+    name: String
+    email: String
+}

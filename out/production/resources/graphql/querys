@@ -1,0 +1,44 @@
+query bookDetails {
+  bookByName(name: "Cien años de soledad") {
+    name
+    pageCount
+    year
+    author{
+      name
+    }
+  }
+}
+
+mutation AddBook {
+  addBook(
+    book: {name: "Cien años de soledad", pageCount: "471", year: "1967"}
+    authors: [{name: "Gabriel Garcia Marquez",id: "133235", city: {name: "Aracataca"}, country: {name: "Colombia"}}]
+    country: {name: "México"}
+    editorial: {name: "	Editorial Sudamericana", city: {name: "Buenos Aires"}}
+  ) {
+    name
+    year
+    pageCount
+    author {
+      name
+    }
+  }
+}
+
+mutation AddBook {
+  addBook(
+    book: {name: "Delirio", pageCount: "303", year: "2006"}
+    authors: [{name: "Laura Restrepo", id: "11235", city: {name: "Bogotá"}, country: {name: "Colombia"}}, {name: "Hija", id: "143235", city: {name: "Medellín"}, country: {name: "Colombia"}}]
+    country: {name: "Colombia"}
+    editorial: {name: "Santillana Ediciones Generales", city: {name: "Bogotá"}}
+  ) {
+    name
+    year
+    pageCount
+    author {
+      id
+      name
+    }
+  }
+}
+
