@@ -9,19 +9,14 @@ query bookDetails {
   }
 }
 
-mutation AddBook {
-  addBook(
-    book: {name: "Cien años de soledad", pageCount: "471", year: "1967"}
-    authors: [{name: "Gabriel Garcia Marquez",id: "133235", city: {name: "Aracataca"}, country: {name: "Colombia"}}]
-    country: {name: "México"}
-    editorial: {name: "	Editorial Sudamericana", city: {name: "Buenos Aires"}}
+mutation AddPerson {
+  addPerson(
+    person:  {
+       name: "Daniel",
+       email: "daniel2825@hotmail.com"
+    }
   ) {
     name
-    year
-    pageCount
-    author {
-      name
-    }
   }
 }
 
