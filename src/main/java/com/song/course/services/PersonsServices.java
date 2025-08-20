@@ -16,7 +16,7 @@ public class PersonsServices {
     }
 
     public Person savePerson(final Person person) {
-        return personsRepository.save(person);
+        return personsRepository.savePerson(person.getName(),person.getEmail());
     }
 
 }
