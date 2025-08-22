@@ -19,4 +19,8 @@ public class PersonsServices {
         return personsRepository.savePerson(person.getName(),person.getEmail());
     }
 
+    public Person getPerson(final String email) {
+        return personsRepository.findAlreadyExistPerson(email);
+    }
+
 }

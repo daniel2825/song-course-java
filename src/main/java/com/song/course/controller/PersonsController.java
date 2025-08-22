@@ -6,6 +6,7 @@ import com.song.course.services.PersonsServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
+import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,5 +24,9 @@ public class PersonsController {
     public Person addPerson(
             @Argument Person person) {
         return personsServices.savePerson(person);
+    }
+    @QueryMapping
+    public Person getPerson(@Argument String email) {
+        return personsServices.getPerson(email);
     }
 }
