@@ -20,6 +20,14 @@ mutation AddPerson {
   }
 }
 
+query GetPerson {
+  getPerson(
+       email: "daniel2825@hotmail.com"
+  ) {
+    email
+  }
+}
+
 mutation AddBook {
   addBook(
     book: {name: "Delirio", pageCount: "303", year: "2006"}
