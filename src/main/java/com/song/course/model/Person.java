@@ -13,6 +13,10 @@ public class Person {
 
     private String email;
 
+    private String lastName;
+
+    private String birthDay;
+
     public Long getId() {
         return id;
     }
@@ -35,5 +39,21 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getBirthDay() {
+        return birthDay;
+    }
+
+    public void setBirthDay(String birthDay) {
+        this.birthDay = birthDay;
     }
 }

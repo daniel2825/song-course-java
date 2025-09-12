@@ -1,6 +1,8 @@
 input PersonInput{
     name: String
     email: String
+    lastName: String
+    birthDay: String
 }
 
 type Mutation {
@@ -15,4 +17,6 @@ type Person {
     id: ID
     name: String
     email: String
+    lastName: String
+    birthDay: String
 }
