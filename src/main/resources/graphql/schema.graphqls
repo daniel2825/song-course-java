@@ -7,6 +7,7 @@ input PersonInput{
 
 type Mutation {
     addPerson(person:PersonInput!):Person
+    subscribePersonToCourse(person:PersonInput!):Person
 }
 
 type Query {
