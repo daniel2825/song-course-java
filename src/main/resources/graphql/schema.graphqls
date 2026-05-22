@@ -5,9 +5,14 @@ input PersonInput{
     birthDay: String
 }
 
+input CourseInput{
+    idCourse: String
+    title:String
+}
+
 type Mutation {
     addPerson(person:PersonInput!):Person
-    subscribePersonToCourse(person:PersonInput!):Person
+    subscribePersonToCourse(person:PersonInput!,course:CourseInput):Person
 }
 
 type Query {
@@ -20,4 +25,11 @@ type Person {
     email: String
     lastName: String
     birthDay: String
+    course: Course
+}
+
+type Course{
+    id: ID
+    idCourse: String
+    title: String
 }

@@ -14,9 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class PersonsController {
 
     @Autowired
-    private CoursesServices coursesServices;
-
-    @Autowired
     private PersonsServices personsServices;
 
     @MutationMapping
