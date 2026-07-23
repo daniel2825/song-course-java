@@ -1,3 +1,17 @@
+
+mutation AddPerson {
+  addPerson(
+    person:  {
+       name: "Daniel",
+       lastName : "Galindo"
+       email: "daniel2825@hotmail.com",
+       birthDay: "11/11/1990"
+    }
+  ) {
+    name
+  }
+}
+
 query bookDetails {
   bookByName(name: "Cien años de soledad") {
     name
